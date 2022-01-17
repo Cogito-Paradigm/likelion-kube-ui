@@ -1,10 +1,8 @@
-var HOST_NAME = 'http://rest-container-service.default.svc.cluster.local:3000';
-//
 window.onload = function () {
 	var URLSearch = new URLSearchParams(location.search);
 	var id = URLSearch.get('id');
 	//
-	fetch(`${HOST_NAME}/api/detail?id=${id}`)
+	fetch(`${location.origin}/api/detail?id=${id}`)
 		.then((response) => response.json())
 		.then((data) => {
 			//
